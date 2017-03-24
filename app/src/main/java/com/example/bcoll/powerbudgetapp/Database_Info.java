@@ -12,9 +12,30 @@ import android.database.sqlite.SQLiteQueryBuilder;
 
 public class Database_Info extends SQLiteOpenHelper {
     private static final String DB_Name = "Budget_Database";
+    private static final int DB_Version = 1;
 
-    public Database_Info (Context context)
-    {
-        super(context, DATABASE_NAME,null,1);
+    public Database_Info (Context context) {
+        super(context,DB_Name,null,DB_Version);
     }
+
+    @Override
+    public void onCreate(SQLiteDatabase db){
+
+    }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL("DROP TABLE IF EXISTS contacts");
+        onCreate(db);
+    }
+
+
+
+
+
+
+
+
+
+
 }
