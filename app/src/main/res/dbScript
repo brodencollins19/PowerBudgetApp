@@ -1,0 +1,43 @@
+DROP TABLE IF EXISTS Users, Budget, Incentive, Container, Transaction;
+
+CREATE TABLE User(
+userID			INT PRIMARY KEY NOT NULL,
+firstName		TEXT NOT NULL,
+lastName		TEXT NOT NULL,
+password		TEXT NOT NULL
+);
+
+CREATE TABLE Budget(
+budgetID		INT PRIMARY KEY NOT NULL,
+totalAmount		DOUBLE NOT NULL,
+totalSavings	DOUBLE NOT NULL,	
+FOREIGN KEY 	(userID_FK) REFERENCES User(userID)
+);
+
+
+
+CREATE TABLE Incentive(
+IncentiveID		INT PRIMARY KEY NOT NULL,
+incentiveGold	TEXT NOT NULL,
+incentiveGold	TEXT NOT NULL,
+incentiveGold	TEXT NOT NULL,
+FOREIGN KEY (budgetID_FK) REFERENCES Budget(budgetID)
+
+);
+
+CREATE TABLE Container(
+containerID		INT PRIMARY KEY NOT NULL,
+containerName   TEXT NOT NULL,
+containerAmount DOUBLE NOT NULL,
+FOREIGN KEY (budgetID_FK) REFERENCES Budget(budgetID);
+);
+
+
+
+
+CREATE TABLE Transaction(
+TransactionID	  INT PRIMARY KEY NOT NULL,
+transactionAmount DOUBLE NOT NULL,
+tranactionDescrip TEXT NOT NULL,
+FOREIGN KEY ('containerID_FK') REFERENCES Container(containerID)
+);
