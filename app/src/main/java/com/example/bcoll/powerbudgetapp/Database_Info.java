@@ -19,12 +19,10 @@ import android.database.sqlite.SQLiteQueryBuilder;
 import java.io.*;
 import java.util.Scanner;
 
-
-
 public class Database_Info extends SQLiteOpenHelper {
     private static final String DB_Name = "Budget_Database";
-    private static final int DB_Version = 1;
-    Scanner dbFileScanner;
+    private static final int DB_Version = 1;        //   -Probs dont need this */
+
 
     public Database_Info (Context context) {
         super(context,DB_Name,null,DB_Version);
@@ -37,7 +35,7 @@ public class Database_Info extends SQLiteOpenHelper {
         try{
             dbScanner = new Scanner(new File("res/dbScript"));
             while(dbScanner.hasNextLine()){
-                createTables += dbScanner.nextLine();
+                createTables += dbScanner.nextLine() + "\n";
             }
         }catch(IOException e){
             e.printStackTrace();
@@ -52,6 +50,30 @@ public class Database_Info extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS Users, Budget, Incentive, Container, Transaction");
         onCreate(db);
     }
+
+
+    public void addUser(){
+
+    }
+
+
+    public void addBudget(){
+
+    }
+
+    public void addIncentive(){
+
+    }
+
+    public void addContainer(){
+
+    }
+
+    public void addTranaction(){
+
+    }
+
+
 
 
 
