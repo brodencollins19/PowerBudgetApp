@@ -8,6 +8,107 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/colorWhite"
     tools:context="com.example.bcoll.powerbudgetapp.inputUserInfo">
 
+    <TextView
+        android:text="TextView"
+        android:textColor="@color/colorBlack"
+        android:layout_width="100dp"
+        android:layout_marginTop="14dp"
+        android:id="@+id/totalBudgetView"
+        tools:text="Total Budget"
+        android:layout_height="50dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    android:background="@color/colorPrimaryDark"
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number|numberDecimal"
+        android:ems="10"
+        android:background="@color/colorGreen"
+        android:id="@+id/TotalBudgetField"
+        android:layout_below="@+id/totalBudgetView"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Container: Food"
+        android:textColor="@color/colorBlack"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="29dp"
+        android:id="@+id/FoodView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:layout_below="@+id/TotalBudgetField"
+        android:layout_alignStart="@+id/RentView"
+        tools:text="Food" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:background="@color/colorGreen"
+        android:layout_below="@+id/FoodView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp"
+        android:id="@+id/FoodField"
+        android:layout_alignEnd="@+id/RentField" />
+
+    <TextView
+        android:text="Container:  Rent"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/RentView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:layout_below="@+id/FoodField"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:background="@color/colorGreen"
+        android:layout_below="@+id/RentView"
+        android:layout_alignParentStart="true"
+        android:id="@+id/RentField" />
+
+    <TextView
+        android:text="Container: Entertainment"
+        android:textColor="@color/colorBlack"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/EntertainmentView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:layout_below="@+id/RentField"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="33dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:background="@color/colorGreen"
+        android:id="@+id/EntertainmentField"
+        android:layout_alignTop="@+id/EntertainmentView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="61dp" />
+
+    <Button
+        android:text="Set Budget Infomation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/EntertainmentField"
+        android:layout_toEndOf="@+id/EntertainmentField"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="13dp"
+        android:id="@+id/SetValues" />
 </RelativeLayout>

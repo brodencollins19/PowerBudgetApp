@@ -17,4 +17,6 @@
     <string name="title_activity_main2">Main2Activity</string>
     <string name="title_activity_input_user_info">inputUserInfo</string>
     <string name="title_activity_budget_transaction">budgetTransaction</string>
+    <string name="title_activity_dashboard">Dashboard</string>
+    <string name="title_activity_generate__report">Generate_Report</string>
 </resources>

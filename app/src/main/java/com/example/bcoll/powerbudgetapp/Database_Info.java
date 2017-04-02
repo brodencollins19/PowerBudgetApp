@@ -52,25 +52,39 @@ public class Database_Info extends SQLiteOpenHelper {
     }
 
 
-    public void addUser(){
+    public void addUser(User user){
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "";
 
     }
 
 
     public void addBudget(){
-
-    }
-
-    public void addIncentive(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "";
 
     }
 
     public void addContainer(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "";
 
     }
 
     public void addTranaction(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "";
 
+    }
+
+
+    public String getAllTables(){          //TEST FUNCTION ONLY
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "show all tables";
+        String result = "";
+
+
+      return result;
     }
 
 
