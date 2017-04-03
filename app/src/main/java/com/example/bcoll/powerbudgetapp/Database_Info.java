@@ -14,11 +14,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteQueryBuilder;
 
-/*
-  JAve utils for file IO
- */
-import java.io.*;
-import java.util.Scanner;
+import java.util.List;
 
 public class Database_Info extends SQLiteOpenHelper {
     private static final String DB_Name = "Budget_Database";
@@ -40,7 +36,7 @@ public class Database_Info extends SQLiteOpenHelper {
     private final String BUDGET_ID = "budgetID";
     private final String BUDGET_AMOUNT = "totalAmount";
     private final String BUDGET_SAVINGS = "totalSavings";
-    private final String BUDGET_USER_FK = "budgetID_FK";
+    private final String BUDGET_USER_FK = "userID_FK";
 
     // Container Columns
     private final String CONTAINER_ID = "containerID";
@@ -58,17 +54,21 @@ public class Database_Info extends SQLiteOpenHelper {
     //Table create statements
 
     private String create_User_Table = "CREATE TABLE " + TABLE_USER + "( " +
-            USER_ID + "INT PRIMARY KEY NOT NULL, " + USER_NAME + "TEXT NOT NULL, " +
-            USER_PASSWORD + "TEXT NOT NULL );";
+            USER_ID + " INT PRIMARY KEY NOT NULL, " + USER_NAME + " TEXT NOT NULL, " +
+            USER_PASSWORD + " TEXT NOT NULL );";
 
 
     private String create_Budget_Table = "CREATE TABLE " + TABLE_BUDGET + "( " +
-            BUDGET_ID + "INT PRIMARY KEY NOT NULL, " + BUDGET_AMOUNT + "DOUBLE NOT NULL, " +
+            BUDGET_ID + " INT PRIMARY KEY NOT NULL, " + BUDGET_AMOUNT + "DOUBLE NOT NULL, " +
             BUDGET_SAVINGS +"DOUBLE NOT NULL, " + "FOREIGN KEY (userID_FK) REFERENCES User(userID) );";
 
 
-    private String create_Container_Table = "";
-    private String create_Transaction_Table ="";
+    private String create_Container_Table = "CREATE TABLE " + TABLE_CONTAINER + "( " +
+                   CONTAINER_ID + " INT PRIMARY KEY NOT NULL, " + CONTAINER_NAME + " TEXT NOT NULL, " +
+                   CONTAINER_AMOUNT + " DOUBLE NOT NULL, " + "FOREIGN KEY (budgetID_FK) REFERENCES Budget(budgetID) );";
+
+
+    //private String create_Transaction_Table ="";
 
 
 
@@ -82,7 +82,7 @@ public class Database_Info extends SQLiteOpenHelper {
         db.execSQL(create_User_Table);
         db.execSQL(create_Budget_Table);
         db.execSQL(create_Container_Table);
-        db.execSQL(create_Transaction_Table);
+      //  db.execSQL(create_Transaction_Table);
     }
 
     @Override
@@ -103,12 +103,25 @@ public class Database_Info extends SQLiteOpenHelper {
 
 
 
+    public User getUser(int id){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+
+    }
+
+
+
 
     public void addBudget(Budget budget){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
 
         //values.put(BUDGET_AMOUNT,budg);
+
+    }
+
+
+    public Budget getBudget(int id){
 
     }
 
@@ -119,15 +132,19 @@ public class Database_Info extends SQLiteOpenHelper {
     }
 
 
+    public void updateContainer(){
 
-    public String getAllTables(){          //TEST FUNCTION ONLY
-        SQLiteDatabase db = this.getWritableDatabase();
-        String query = "show all tables";
-        String result = "";
-
-
-      return result;
     }
+
+    public Container getContainer(int id){
+
+    }
+
+    public List<Container> getAllContainers(){
+
+    }
+
+
 
 
 
