@@ -14,8 +14,7 @@ public class User {
 
     }
 
-    public User (int id, String name, String pass){
-        this.user_id = id;
+    public User (String name, String pass){
         this.name = name;
         this.password = pass;
     }

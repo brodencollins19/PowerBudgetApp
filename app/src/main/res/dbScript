@@ -1,9 +1,7 @@
-DROP TABLE IF EXISTS Users, Budget, Incentive, Container, Transaction;
 
 CREATE TABLE User(
 userID			INT PRIMARY KEY NOT NULL,
-firstName		TEXT NOT NULL,
-lastName		TEXT NOT NULL,
+name            TEXT NOT NUlL,
 password		TEXT NOT NULL
 );
 
@@ -16,20 +14,12 @@ FOREIGN KEY 	(userID_FK) REFERENCES User(userID)
 
 
 
-CREATE TABLE Incentive(
-IncentiveID		INT PRIMARY KEY NOT NULL,
-incentiveGold	TEXT NOT NULL,
-incentiveGold	TEXT NOT NULL,
-incentiveGold	TEXT NOT NULL,
-FOREIGN KEY (budgetID_FK) REFERENCES Budget(budgetID)
-
-);
 
 CREATE TABLE Container(
 containerID		INT PRIMARY KEY NOT NULL,
 containerName   TEXT NOT NULL,
 containerAmount DOUBLE NOT NULL,
-FOREIGN KEY (budgetID_FK) REFERENCES Budget(budgetID);
+FOREIGN KEY (budgetID_FK) REFERENCES Budget(budgetID)
 );
 
 

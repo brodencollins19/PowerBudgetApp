@@ -10,13 +10,37 @@ public class budgetTransaction extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_budget_transaction);
 
+    }
 
 
 
+    protected void onStart() {
+        super.onStart();
+    }
 
 
-
+    @Override
+    protected void onResume() {
+        super.onResume();
 
     }
+
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+   }
 
 }

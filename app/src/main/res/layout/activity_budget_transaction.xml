@@ -63,4 +63,12 @@
         android:layout_alignStart="@+id/entertainmentTransButton"
         android:layout_marginBottom="15dp" />
 
+    <Button
+        android:text="Back to Dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TransDashButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>

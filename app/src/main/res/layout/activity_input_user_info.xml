@@ -61,7 +61,8 @@
         android:layout_alignEnd="@+id/RentField" />
 
     <TextView
-        android:text="Container:  Rent"
+        android:text="Rent"
+        android:textColor="@color/colorBlack"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:id="@+id/RentView"
@@ -81,7 +82,7 @@
         android:id="@+id/RentField" />
 
     <TextView
-        android:text="Container: Entertainment"
+        android:text="Entertainment"
         android:textColor="@color/colorBlack"
         android:layout_width="100dp"
         android:layout_height="50dp"
@@ -111,4 +112,12 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="13dp"
         android:id="@+id/SetValues" />
+
+    <Button
+        android:text="Back to Dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/SetValues"
+        android:layout_alignEnd="@+id/EntertainmentView"
+        android:id="@+id/InfoDashButton" />
 </RelativeLayout>
