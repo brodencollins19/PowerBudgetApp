@@ -108,7 +108,7 @@ public class Database_Info extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
 
-        values.put(BUDGET_AMOUNT,budg);
+        //values.put(BUDGET_AMOUNT,budg);
 
     }
 
