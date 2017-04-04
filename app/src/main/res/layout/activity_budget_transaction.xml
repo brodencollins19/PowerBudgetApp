@@ -16,14 +16,14 @@
         android:layout_width="100dp"
         android:layout_height="70dp"
         app:srcCompat="@drawable/food"
-        android:id="@+id/imageView5" />
+        android:id="@+id/foodTransIcon" />
 
     <ImageView
         android:layout_width="100dp"
         android:layout_height="70dp"
-        app:srcCompat="@drawable/food"
-        android:id="@+id/imageView3"
-        android:layout_below="@+id/imageView4"
+        app:srcCompat="@drawable/entertainment"
+        android:id="@+id/entTransIcon"
+        android:layout_below="@+id/rentTransIcon"
         android:layout_alignParentStart="true"
         android:layout_marginTop="49dp" />
 
@@ -31,10 +31,11 @@
         android:layout_width="100dp"
         android:layout_height="70dp"
         app:srcCompat="@drawable/rent"
-        android:id="@+id/imageView4"
-        android:layout_below="@+id/imageView5"
-        android:layout_alignEnd="@+id/imageView3"
-        android:layout_marginTop="45dp" />
+        android:id="@+id/rentTransIcon"
+        android:layout_below="@+id/foodTransIcon"
+        android:layout_alignEnd="@+id/entTransIcon"
+        android:layout_marginTop="45dp"
+        android:adjustViewBounds="false" />
 
     <RadioButton
         android:text="Food"
@@ -50,16 +51,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/entertainmentTransButton"
-        android:layout_alignBottom="@+id/imageView3"
+        android:layout_alignBottom="@+id/entTransIcon"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="10dp" />
+        android:layout_marginBottom="10dp"
+        android:checked="false"
+        android:duplicateParentState="false" />
 
     <RadioButton
         android:text="Rent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/rentTransButton"
-        android:layout_alignBottom="@+id/imageView4"
+        android:layout_alignBottom="@+id/rentTransIcon"
         android:layout_alignStart="@+id/entertainmentTransButton"
         android:layout_marginBottom="15dp" />
 

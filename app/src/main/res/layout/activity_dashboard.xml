@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/transButton"
-        android:layout_above="@+id/reportButton"
+        android:layout_below="@+id/budgetButton"
         android:layout_alignStart="@+id/budgetButton"
-        android:layout_marginBottom="114dp" />
+        android:layout_marginTop="137dp" />
 </RelativeLayout>

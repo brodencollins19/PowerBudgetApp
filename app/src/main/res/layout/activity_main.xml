@@ -30,7 +30,6 @@
         android:background="@color/colorPrimaryDark"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Name"
         android:ems="10"
         android:layout_centerVertical="true"
         android:layout_alignRight="@+id/userPassField"
@@ -46,11 +45,10 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="149dp"
-        android:id="@+id/userPassField"
-        android:text="Password" />
+        android:id="@+id/userPassField" />
 
     <Button
-        android:text="Button"
+        android:text="Login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

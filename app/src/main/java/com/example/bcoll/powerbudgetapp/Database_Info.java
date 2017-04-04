@@ -80,8 +80,8 @@ public class Database_Info extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db){
         db.execSQL("PRAGMA foreign_keys=ON;");
         db.execSQL(create_User_Table);
-        db.execSQL(create_Budget_Table);
-        db.execSQL(create_Container_Table);
+        //db.execSQL(create_Budget_Table);
+        //db.execSQL(create_Container_Table);
       //  db.execSQL(create_Transaction_Table);
     }
 
@@ -103,11 +103,11 @@ public class Database_Info extends SQLiteOpenHelper {
 
 
 
-    public User getUser(int id){
-        SQLiteDatabase db = this.getWritableDatabase();
+   // public User getUser(int id){
+      //  SQLiteDatabase db = this.getWritableDatabase();
 
 
-    }
+    //}
 
 
 
@@ -121,9 +121,9 @@ public class Database_Info extends SQLiteOpenHelper {
     }
 
 
-    public Budget getBudget(int id){
+   // public Budget getBudget(int id){
 
-    }
+   // }
 
     public void addContainer(){
         SQLiteDatabase db = this.getWritableDatabase();
@@ -136,13 +136,13 @@ public class Database_Info extends SQLiteOpenHelper {
 
     }
 
-    public Container getContainer(int id){
+    //public Container getContainer(int id){
 
-    }
+   // }
 
-    public List<Container> getAllContainers(){
+    //public List<Container> getAllContainers(){
 
-    }
+   // }
 
 
 

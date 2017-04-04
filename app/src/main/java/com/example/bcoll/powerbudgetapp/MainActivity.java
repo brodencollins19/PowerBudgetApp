@@ -1,10 +1,13 @@
 package com.example.bcoll.powerbudgetapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Button;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -29,11 +32,17 @@ public class MainActivity extends AppCompatActivity {
                String nameString = userName.getText().toString();
                String passString = password.getText().toString();
 
-               User newUser = new User(nameString, passString);
+                if(passString.isEmpty() || nameString.isEmpty()){
+                    Toast toast = Toast.makeText(getApplicationContext(),"Invalid Credentials",Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.TOP,0,0);
+                    toast.show();
+                }
+                else{
+                    User newUser = new User(nameString, passString);
+                    db.addUser(newUser);
+                    startActivity(new Intent(getApplicationContext(),Dashboard.class));
+                }
 
-                db.addUser(newUser);
-
-                setContentView(R.layout.activity_dashboard);
             }
         });
 

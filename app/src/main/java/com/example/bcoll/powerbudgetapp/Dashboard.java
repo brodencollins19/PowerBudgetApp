@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.View;
 import android.widget.Button;
+import android.content.Intent;
 
 public class Dashboard extends Activity {
 
@@ -23,23 +24,22 @@ public class Dashboard extends Activity {
 
         budgetButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                setContentView(R.layout.activity_input_user_info);
+                startActivity(new Intent(getBaseContext(),inputUserInfo.class));
             }
         });
 
         transButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                setContentView(R.layout.activity_budget_transaction);
+                startActivity(new Intent(getBaseContext(),budgetTransaction.class));
             }
         });
 
 
         reportButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                setContentView(R.layout.activity_generate__report);
+                startActivity(new Intent(getBaseContext(),Generate_Report.class));
             }
         });
-
 
     }
 
