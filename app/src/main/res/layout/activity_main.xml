@@ -47,16 +47,6 @@
         android:layout_marginBottom="149dp"
         android:id="@+id/userPassField" />
 
-    <Button
-        android:text="Login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="43dp"
-        android:id="@+id/loginButton"
-        tools:text="Login" />
-
     <ImageView
         android:layout_width="90dp"
         android:layout_height="50dp"
@@ -75,6 +65,25 @@
         android:layout_centerVertical="true"
         android:layout_toLeftOf="@+id/userNameField"
         android:layout_toStartOf="@+id/userNameField" />
+
+    <Button
+        android:text="Add USer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/loginButton"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginStart="37dp"
+        android:id="@+id/addUSerButton" />
+
+    <Button
+        android:text="Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loginButton"
+        tools:text="Login"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/userPassField"
+        android:layout_marginBottom="37dp" />
 
 
 </RelativeLayout>

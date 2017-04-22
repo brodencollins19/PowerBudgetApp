@@ -37,35 +37,6 @@
         android:layout_marginTop="45dp"
         android:adjustViewBounds="false" />
 
-    <RadioButton
-        android:text="Food"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/foodTransButton"
-        android:layout_marginTop="14dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/rentTransButton" />
-
-    <RadioButton
-        android:text="Entertainment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/entertainmentTransButton"
-        android:layout_alignBottom="@+id/entTransIcon"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="10dp"
-        android:checked="false"
-        android:duplicateParentState="false" />
-
-    <RadioButton
-        android:text="Rent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/rentTransButton"
-        android:layout_alignBottom="@+id/rentTransIcon"
-        android:layout_alignStart="@+id/entertainmentTransButton"
-        android:layout_marginBottom="15dp" />
-
     <Button
         android:text="Back to Dashboard"
         android:layout_width="wrap_content"
@@ -73,5 +44,53 @@
         android:id="@+id/TransDashButton"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="13dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorWhite"
+        android:textColor="@color/colorBlack"
+        android:id="@+id/foodTransField"
+        android:text="0" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_alignTop="@+id/rentTransIcon"
+        android:background="@color/colorWhite"
+        android:layout_alignStart="@+id/foodTransField"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorBlack"
+        android:id="@+id/rentTransField"
+        android:text="0" />
+
+    <Button
+        android:text="Make Transactions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/TransDashButton"
+        android:layout_marginStart="26dp"
+        android:id="@+id/makeTransButton" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:background="@color/colorWhite"
+        android:id="@+id/entTransField"
+        android:layout_alignTop="@+id/entTransIcon"
+        android:layout_alignStart="@+id/rentTransField"
+        android:textColor="@color/colorBlack"
+        android:text="0" />
 
 </RelativeLayout>

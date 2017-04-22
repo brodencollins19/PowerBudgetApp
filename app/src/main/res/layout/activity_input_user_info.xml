@@ -12,7 +12,7 @@
     tools:context="com.example.bcoll.powerbudgetapp.inputUserInfo">
 
     <TextView
-        android:text="TextView"
+        android:text="Total Budget"
         android:textColor="@color/colorBlack"
         android:layout_width="100dp"
         android:layout_marginTop="14dp"
@@ -26,16 +26,6 @@
 
     android:background="@color/colorPrimaryDark"
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number|numberDecimal"
-        android:ems="10"
-        android:background="@color/colorGreen"
-        android:id="@+id/TotalBudgetField"
-        android:layout_below="@+id/totalBudgetView"
-        android:layout_alignParentStart="true" />
-
     <TextView
         android:text="Container: Food"
         android:textColor="@color/colorBlack"
@@ -48,18 +38,6 @@
         android:layout_alignStart="@+id/RentView"
         tools:text="Food" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:background="@color/colorGreen"
-        android:layout_below="@+id/FoodView"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="12dp"
-        android:id="@+id/FoodField"
-        android:layout_alignEnd="@+id/RentField" />
-
     <TextView
         android:text="Rent"
         android:textColor="@color/colorBlack"
@@ -70,16 +48,6 @@
         android:layout_below="@+id/FoodField"
         android:layout_alignParentStart="true"
         android:layout_marginTop="15dp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:background="@color/colorGreen"
-        android:layout_below="@+id/RentView"
-        android:layout_alignParentStart="true"
-        android:id="@+id/RentField" />
 
     <TextView
         android:text="Entertainment"
@@ -97,27 +65,77 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
+        android:textColor="@color/colorBlack"
         android:background="@color/colorGreen"
         android:id="@+id/EntertainmentField"
         android:layout_alignTop="@+id/EntertainmentView"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="61dp" />
+        android:layout_marginTop="61dp"
+        android:text="0" />
 
-    <Button
-        android:text="Set Budget Infomation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/EntertainmentField"
-        android:layout_toEndOf="@+id/EntertainmentField"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="13dp"
-        android:id="@+id/SetValues" />
 
     <Button
         android:text="Back to Dashboard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/SetValues"
-        android:layout_alignEnd="@+id/EntertainmentView"
-        android:id="@+id/InfoDashButton" />
+        android:layout_alignTop="@+id/NewBudget"
+        android:id="@+id/InfoDashButton"
+        android:layout_alignBottom="@+id/UpdateBudget"
+        android:layout_toStartOf="@+id/UpdateBudget" />
+
+    <Button
+        android:text=" Update Budget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/UpdateBudget"
+        android:layout_alignBottom="@+id/NewBudget"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@+id/NewBudget" />
+
+    <Button
+        android:text="New Budget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:id="@+id/NewBudget"
+        android:layout_below="@+id/EntertainmentField"
+        android:layout_toEndOf="@+id/UpdateBudget" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:background="@color/colorGreen"
+        android:id="@+id/TotalBudgetField"
+        android:layout_alignBottom="@+id/totalBudgetView"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/colorBlack"
+        tools:text="0"
+        android:text="0" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:background="@color/colorGreen"
+        android:textColor="@color/colorBlack"
+        android:id="@+id/FoodField"
+        android:layout_alignBottom="@+id/FoodView"
+        android:layout_alignParentStart="true"
+        android:text="0" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:background="@color/colorGreen"
+        android:textColor="@color/colorBlack"
+        android:id="@+id/RentField"
+        android:text="0"
+        android:layout_alignBottom="@+id/RentView"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>
