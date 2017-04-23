@@ -15,13 +15,13 @@
     <ImageView
         android:layout_width="100dp"
         android:layout_height="70dp"
-        app:srcCompat="@drawable/food"
+        android:src="@mipmap/food"
         android:id="@+id/foodTransIcon" />
 
     <ImageView
         android:layout_width="100dp"
         android:layout_height="70dp"
-        app:srcCompat="@drawable/entertainment"
+        android:src="@mipmap/entertainment"
         android:id="@+id/entTransIcon"
         android:layout_below="@+id/rentTransIcon"
         android:layout_alignParentStart="true"
@@ -30,7 +30,7 @@
     <ImageView
         android:layout_width="100dp"
         android:layout_height="70dp"
-        app:srcCompat="@drawable/rent"
+        android:src="@mipmap/rent"
         android:id="@+id/rentTransIcon"
         android:layout_below="@+id/foodTransIcon"
         android:layout_alignEnd="@+id/entTransIcon"
@@ -73,7 +73,7 @@
         android:text="0" />
 
     <Button
-        android:text="Make Transactions"
+        android:text="Update Transaction Expenses"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

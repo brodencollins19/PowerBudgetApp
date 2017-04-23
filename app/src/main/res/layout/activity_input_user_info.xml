@@ -138,4 +138,12 @@
         android:text="0"
         android:layout_alignBottom="@+id/RentView"
         android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Reallocate Savings"
+        android:layout_width="300dp"
+        android:layout_below="@+id/UpdateBudget"
+        android:layout_marginTop="19dp"
+        android:id="@+id/SavingsRealloc"
+        android:layout_height="wrap_content" />
 </RelativeLayout>

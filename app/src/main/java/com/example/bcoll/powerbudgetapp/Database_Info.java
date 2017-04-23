@@ -137,7 +137,7 @@ public class Database_Info extends SQLiteOpenHelper {
             ContentValues values = new ContentValues();
 
             values.put(BUDGET_AMOUNT,budget.getTotalAmount());                               //Adds a new bedgut to the database
-            values.put(BUDGET_SAVINGS,0);
+            values.put(BUDGET_SAVINGS,budget.getTotalSavings());
 
             values.put(BUDGET_RENT,budget.getRentAmount());
             values.put(BUDGET_ENTERTAINMENT,budget.getFoodAmount());
@@ -189,9 +189,7 @@ public class Database_Info extends SQLiteOpenHelper {
 
         ContentValues values = new ContentValues();
 
-
         values.put(BUDGET_AMOUNT,budget.getTotalAmount());                               //Adds a new bedgut to the database
-        values.put(BUDGET_SAVINGS,0);
 
         values.put(BUDGET_RENT,budget.getRentAmount());
         values.put(BUDGET_ENTERTAINMENT,budget.getEntertainementAmount());
@@ -213,6 +211,16 @@ public class Database_Info extends SQLiteOpenHelper {
 
         db.update(TABLE_BUDGET, values, BUDGET_ID + " =?", new String[] {String.valueOf(1) });
 
+    }
+
+    public void updateBudgetSavings(Budget budget){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+
+        values.put(BUDGET_SAVINGS,budget.getTotalSavings());
+
+        db.update(TABLE_BUDGET, values, BUDGET_ID + " =?", new String[] {String.valueOf(1) });
     }
 
 
